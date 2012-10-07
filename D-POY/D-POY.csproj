@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06CFD19F-9798-4384-9A9F-E943E1DC1BE6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>D_POY</RootNamespace>
+    <AssemblyName>D-POY</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdventureWorks_DataEntities.cs" />
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BolumBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BolumBilgileri.Designer.cs">
+      <DependentUpon>BolumBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DersDonemIliskileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DersDonemIliskileri.Designer.cs">
+      <DependentUpon>DersDonemIliskileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dersler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dersler.Designer.cs">
+      <DependentUpon>Dersler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dersİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dersİslemleri.Designer.cs">
+      <DependentUpon>Dersİslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donemler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donemler.Designer.cs">
+      <DependentUpon>Donemler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FizikselSiniflar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FizikselSiniflar.Designer.cs">
+      <DependentUpon>FizikselSiniflar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fonksiyon.cs" />
+    <Compile Include="GunVeSaatler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunVeSaatler.Designer.cs">
+      <DependentUpon>GunVeSaatler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciBilgilerim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciBilgilerim.Designer.cs">
+      <DependentUpon>KullaniciBilgilerim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullanıcıGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullanıcıGirisi.Designer.cs">
+      <DependentUpon>KullanıcıGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrElemaniIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrElemaniIslemleri.Designer.cs">
+      <DependentUpon>OgrElemaniIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrElemanlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrElemanlari.Designer.cs">
+      <DependentUpon>OgrElemanlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YeniKullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeniKullanici.Designer.cs">
+      <DependentUpon>YeniKullanici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiPaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiPaneli.Designer.cs">
+      <DependentUpon>YoneticiPaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciSiniflari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciSiniflari.Designer.cs">
+      <DependentUpon>OgrenciSiniflari.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BolumBilgileri.resx">
+      <DependentUpon>BolumBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DersDonemIliskileri.resx">
+      <DependentUpon>DersDonemIliskileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dersler.resx">
+      <DependentUpon>Dersler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dersİslemleri.resx">
+      <DependentUpon>Dersİslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donemler.resx">
+      <DependentUpon>Donemler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FizikselSiniflar.resx">
+      <DependentUpon>FizikselSiniflar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunVeSaatler.resx">
+      <DependentUpon>GunVeSaatler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciBilgilerim.resx">
+      <DependentUpon>KullaniciBilgilerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullanıcıGirisi.resx">
+      <DependentUpon>KullanıcıGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrElemaniIslemleri.resx">
+      <DependentUpon>OgrElemaniIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrElemanlari.resx">
+      <DependentUpon>OgrElemanlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="YeniKullanici.resx">
+      <DependentUpon>YeniKullanici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiPaneli.resx">
+      <DependentUpon>YoneticiPaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciSiniflari.resx">
+      <DependentUpon>OgrenciSiniflari.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
